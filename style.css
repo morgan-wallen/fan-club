@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --gold: #f5c451;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.heading-font {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
+                    url('https://images.unsplash.com/photo-1516450360452-0c1c7d7a0f2b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 35s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.countdown-digit {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nav-link, .mobile-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover, .mobile-link:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu */
+#mobileMenu {
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.donate-btn {
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .countdown-digit {
+    font-size: 1.9rem;
+  }
+}
