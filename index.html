@@ -70,19 +70,51 @@
       <h2 class="text-4xl heading-font text-center mb-3"> Fan Gallery</h2>
       <p class="text-center text-zinc-400 mb-10">Live moments•Behind the scenes•Pure energy</p>
 
-      <div class="overflow-hidden">
-        <div class="carousel-track flex gap-4">
-          <img src="https://music-row-website-assets.s3.amazonaws.com/wp-content/uploads/2023/09/06182252/Morgan-Wallen_MattPaskert-scaled.jpeg" class="w-80 md:w-96 h-96 object-cover rounded-2xl" alt="Morgan Wallen">
-          <img src="https://images.unsplash.com/photo-1516450360452-0c1c7d7a0f2b?ixlib=rb-4.0.3" class="w-80 md:w-96 h-96 object-cover rounded-2xl" alt="Concert">
-          <img src="https://utdailybeacon.com/wp-content/uploads/2024/07/0485d848d1f12fa1d938bf59f5979124-1200x667.png" class="w-80 md:w-96 h-96 object-cover rounded-2xl" alt="Crowd">
-          <img src="https://marquettewire.org/wp-content/uploads/2023/04/IMG_0696-675x900.jpg" class="w-80 md:w-96 h-96 object-cover rounded-2xl" alt="Live">
-          <!-- Duplicates -->
-          <img src="https://music-row-website-assets.s3.amazonaws.com/wp-content/uploads/2023/09/06182252/Morgan-Wallen_MattPaskert-scaled.jpeg" class="w-80 md:w-96 h-96 object-cover rounded-2xl" alt="Morgan Wallen">
-          <img src="https://images.unsplash.com/photo-1516450360452-0c1c7d7a0f2b?ixlib=rb-4.0.3" class="w-80 md:w-96 h-96 object-cover rounded-2xl" alt="Concert">
+      <div class="carousel">
+
+        <div class="carousel-track" id="carouselTrack">
+
+            <!-- Original Images -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5_wLw0wsB1l8YKcZV4uE5_db7Lb7G6kY0gVgq1GcFEIm8h7q-JB9up5s&s=10" alt="Concert 1">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGRAquBH1t210XyWk32T33GNQjvYx3R9lG0r0seqNjr6U-6jnOIU9ynGXd&s=10" alt="Stage Lights">
+
+            <img src="https://music-row-website-assets.s3.amazonaws.com/wp-content/uploads/2023/09/06182252/Morgan-Wallen_MattPaskert-scaled.jpeg" alt="Crowd Energy">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5mByxfiYE3jvyeCJ6bZLQKuzYueSMeRywkIA7dgziuPQL96zLoPoH0S7t&s=10" alt="Live Performance">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDC0ky1OnR08yePbagv43OWWTQ3F4jLk137BFLvaUksDHepA87LzaB7uO5&s=10" alt="Neon Lights">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnf0YboqPRokvvjWq9WK86G-FwOy78vdMLi3bSz2lW44c9UpuRdB4_qL8&s=10" alt="Artist Closeup">
+
+            <img src="https://marquettewire.org/wp-content/uploads/2023/04/IMG_0696-675x900.jpg" alt="Fan Moment">
+
+            <img src="https://thendbcatalyst.com/wp-content/uploads/2022/09/YFHO5Ljny2dDvHhjS7mkgD76FlFxaKrZqri1R5dh.jpeg" alt="Tour Bus">
+
+            <img src="https://images.axios.com/ZKRxuL2dBw6W1nTs-qvLVpBPjik=/0x380:2700x1899/1920x1080/2025/08/13/1755098129768.jpeg" alt="Festival">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHG4CRazN9HzXH2EeLN81ZJ2oySZIgV5j_7mUS1kcqNVFAE6JfUqDur5r&s=10" alt="Backstage">
+
+            <img src="https://utdailybeacon.com/wp-content/uploads/2024/07/0485d848d1f12fa1d938bf59f5979124-1200x667.png" alt="Crowd Hands">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJqWPrmOYuOZOW74lH3AKt16y_oyp34s5u0E72JLMjH3g6jDtIhzoHYXTG&s=10" alt="Finale">
+
+            <!-- Duplicate Images for Infinite Loop -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5_wLw0wsB1l8YKcZV4uE5_db7Lb7G6kY0gVgq1GcFEIm8h7q-JB9up5s&s=10" alt="Concert 1">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGRAquBH1t210XyWk32T33GNQjvYx3R9lG0r0seqNjr6U-6jnOIU9ynGXd&s=10" alt="Stage Lights">
+
+            <img src="https://music-row-website-assets.s3.amazonaws.com/wp-content/uploads/2023/09/06182252/Morgan-Wallen_MattPaskert-scaled.jpeg" alt="Crowd Energy">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5mByxfiYE3jvyeCJ6bZLQKuzYueSMeRywkIA7dgziuPQL96zLoPoH0S7t&s=10" alt="Live Performance">
+
         </div>
-      </div>
+
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+
     </div>
-  </section>
+</section>
 
   <!-- ABOUT -->
   <section class="py-20 bg-zinc-900">
