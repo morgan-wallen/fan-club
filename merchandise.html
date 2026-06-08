@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate - Morgan Wallen Fan Club</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-zinc-950 text-white">
+  !-- NAV -->
+  <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+<h1 class="text-2xl font-bold heading-font tracking-tight">MORGAN WALLEN</h1>
+      
+  <section class="min-h-screen pt-24 pb-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h1 class="text-5xl heading-font mb-6">Support Morgan Wallen Foundation</h1>
+      <p class="text-xl text-zinc-400 mb-12">Your donation helps support music education, disaster relief, and community programs.</p>
+
+      <div class="glass rounded-3xl p-10">
+        <div class="grid grid-cols-3 gap-4 mb-10">
+          <button onclick="selectAmount(25)" class="donate-btn py-6 rounded-2xl text-xl font-semibold"> $25 </button>
+          <button onclick="selectAmount(50)" class="donate-btn py-6 rounded-2xl text-xl font-semibold bg-amber-400 text-black"> $50 </button>
+          <button onclick="selectAmount(100)" class="donate-btn py-6 rounded-2xl text-xl font-semibold"> $100 </button>
+        </div>
+
+        <input type="number" id="customAmount" placeholder="Custom Amount" 
+               class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-center text-2xl mb-8 focus:outline-none focus:border-amber-400">
+
+        <button onclick="processDonation()" 
+                class="w-full py-6 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold text-xl rounded-2xl hover:scale-105 transition">
+          Donate Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    function selectAmount(amount) {
+      document.getElementById('customAmount').value = amount;
+    }
+    function processDonation() {
+      const amount = document.getElementById('customAmount').value;
+      if (amount) {
+        alert(`Thank you! Your donation of $${amount} has been received.`);
+      } else {
+        alert("Please enter a donation amount.");
+      }
+    }
+  </script>
+</body>
+</html>
