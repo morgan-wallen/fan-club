@@ -294,10 +294,37 @@
   <section id="donation" class="py-20 bg-black">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="text-5xl heading-font mb-6"> Support the Foundation</h2>
-      <p class="text-xl text-zinc-400 mb-12"> Help fund music education and community programs.</p>
+      <p class="text-xl text-zinc-400 mb-12">Join us in making a real difference.
+        Your support of the Morgan Wallen Foundation helps provide opportunities,
+        resources,and hope to those who need it most.
+        Every contribution,big or small,helps change lives and strengthen communities.</p>
+      
+      
       <!-- Donation form (same as before) -->
       <div class="glass rounded-3xl p-10">
+     
         <!-- ... donation buttons and input ... -->
+    
+        <div class="glass rounded-3xl p-10 max-w-lg mx-auto">
+        <div class="grid grid-cols-3 gap-4 mb-10">
+          <button onclick="selectAmount(50)" class="donate-btn py-6 rounded-2xl text-xl font-semibold border border-white/30 hover:border-amber-400"> $25 </button>
+          <button onclick="selectAmount(100)" class="donate-btn py-6 rounded-2xl text-xl font-semibold bg-amber-400 text-black"> $50 </button>
+          <button onclick="selectAmount(500)" class="donate-btn py-6 rounded-2xl text-xl font-semibold border border-white/30 hover:border-amber-400"> $100 </button>
+        </div>
+
+        <input type="number" id="customAmount" placeholder="Custom Amount ($)" 
+               class="w-full bg-white/10 border border-white/30 rounded-2xl px-6 py-5 text-center text-3xl mb-8 focus:outline-none focus:border-amber-400">
+
+        <button onclick="processDonation()" 
+                class="w-full py-6 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold text-xl rounded-2xl hover:scale-105 transition">
+          Donate Securely Now
+        </button>
+      </div>
+
+      <p class="text-xs text-zinc-500 mt-8">All donations are tax-deductible • Thank you for your support ❤️</p>
+    </div>
+  </section>
+      
       </div>
     </div>
   </section>
